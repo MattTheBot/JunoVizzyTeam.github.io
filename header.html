@@ -1,5 +1,5 @@
 <div class="top-bar">
-    <button class="menu-button" onclick="toggleMenu()">
+    <button class="menu-button">
         <span></span><span></span><span></span>
     </button>
     <div class="title">JVT</div>
@@ -20,8 +20,9 @@
 </div>
 
 <script>
-function toggleMenu() {
-    const menu = document.getElementById('dropdownMenu');
-    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-}
+const menuButton = document.querySelector('.menu-button');
+const dropdown = document.getElementById('dropdownMenu');
+menuButton.addEventListener('click', () => {
+    dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+});
 </script>
