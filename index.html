@@ -5,106 +5,68 @@
   <title>JunoVizzyTeam Homepage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    :root {
+      --bg-main: #23272b;
+      --bg-header: #181a1b;
+      --text-main: #e9e9e9;
+      --accent: #6d28d9; /* Slight purple accent for links */
+    }
     body {
+      font-family: Arial, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
       margin: 0;
       padding: 0;
-      background-color: #e0e0e0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      color: #333;
     }
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #222;
-      color: #fff;
-      padding: 0.5em 1.5em;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    .header {
+      background: var(--bg-header);
+      color: var(--text-main);
+      padding: 1.2em 0 1.2em 0;
+      text-align: center;
+      box-shadow: 0 2px 8px #181a1b99;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
-    .navbar-left, .navbar-right {
-      display: flex;
-      align-items: center;
-      gap: 0.5em;
-    }
-    .navbar-logo {
-      font-weight: bold;
-      font-size: 1.3em;
+    .header h1 {
+      margin: 0;
+      font-size: 2em;
       letter-spacing: 1px;
-      margin-right: 1em;
-    }
-    .navbar-button {
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 1em;
-      padding: 0.4em 1em;
-      cursor: pointer;
-      transition: background 0.2s;
-      border-radius: 5px;
-    }
-    .navbar-button:hover {
-      background: #444;
-    }
-    .navbar-social {
-      display: flex;
-      align-items: center;
-      gap: 0.3em;
-    }
-    .navbar-social a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.1em;
-      margin: 0 0.2em;
-      transition: color 0.2s;
-    }
-    .navbar-social a:hover {
-      color: #ffd700;
     }
     .container {
       max-width: 700px;
-      margin: 3em auto 0 auto;
-      background: #fff;
+      margin: 2em auto;
+      background: #23272b;
       border-radius: 10px;
-      box-shadow: 0 0 10px #ccc;
+      box-shadow: 0 0 10px #181a1b55;
       padding: 2em;
     }
-    @media (max-width: 600px) {
-      .container { padding: 1em; }
-      .navbar { flex-direction: column; padding: 1em; }
-      .navbar-left, .navbar-right { flex-direction: row; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 700px) {
+      .container {
+        padding: 1em;
+        margin: 1em;
+      }
+      .header h1 {
+        font-size: 1.4em;
+      }
     }
   </style>
-  <!-- Icons from FontAwesome CDN for social media (optional) -->
-  <script src="https://kit.fontawesome.com/4e92e1e9d2.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="navbar-left">
-      <button class="navbar-button" onclick="openMenu()"><i class="fas fa-bars"></i> Menu</button>
-      <button class="navbar-button" onclick="window.location.href='/'"><i class="fas fa-home"></i> Home</button>
-    </div>
-    <div class="navbar-right">
-      <div class="navbar-social">
-        <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="https://facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-      <button class="navbar-button" onclick="window.location.href='mailto:junovizzy.team@example.com'"><i class="fas fa-envelope"></i> Contact</button>
-    </div>
-  </nav>
-
-  <div class="container">
+  <div class="header">
     <h1>Welcome to JunoVizzyTeam!</h1>
+  </div>
+  <div class="container">
     <p>This is our official homepage, powered by GitHub Pages.</p>
     <p>Stay tuned for updates, projects, and more!</p>
     <p>Contact us: <a href="mailto:junovizzy.team@example.com">junovizzy.team@example.com</a></p>
   </div>
-
-  <script>
-    function openMenu() {
-      alert("Menu button clicked! (Add your menu logic here)");
-    }
-  </script>
 </body>
 </html>
