@@ -2,7 +2,7 @@
 
 Welcome to the official JunoVizzyTeam website, built with [GitHub Pages](https://pages.github.com/).
 
-🌐 **Visit the live website:** [https://JunoVizzyTeam.github.io](https://JunoVizzyTeam.github.io)
+🌐 **Visit the live website:** [https://mattthebot.github.io/JunoVizzyTeam.github.io/#](https://mattthebot.github.io/JunoVizzyTeam.github.io/#)
 
 ## Contact
 
