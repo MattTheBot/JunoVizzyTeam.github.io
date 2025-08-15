@@ -1,0 +1,99 @@
+/* === GENERAL PAGE STYLES === */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e; /* Main dark background */
+    color: white;
+}
+
+/* === TOP BAR STYLES === */
+.top-bar {
+    background-color: #2c2c2c; /* Lighter gray bar */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+/* === LEFT: HAMBURGER MENU BUTTON === */
+.menu-button {
+    background-color: #3a3a3a;
+    border: none;
+    border-radius: 8px; /* Rounded square */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.menu-button span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+/* === CENTER: TITLE === */
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* === RIGHT: SOCIALS + CONTACT BUTTONS === */
+.right-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.social-button, .contact-button {
+    background-color: #3a3a3a;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-button:hover, .contact-button:hover {
+    background-color: #505050;
+}
+
+/* === DROPDOWN MENU STYLES === */
+.dropdown {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 60px; /* Below top bar */
+    left: 15px;
+    background-color: #2c2c2c;
+    min-width: 180px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+.dropdown a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+.dropdown a:hover {
+    background-color: #3a3a3a;
+}
+
+/* === MAIN CONTENT AREA === */
+.content {
+    padding: 20px;
+}
