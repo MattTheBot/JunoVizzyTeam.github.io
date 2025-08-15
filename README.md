@@ -1,5 +1,4 @@
 # JunoVizzyTeam.github.io
-# JunoVizzyTeam Official Homepage
 
 Welcome to the official JunoVizzyTeam website, built with [GitHub Pages](https://pages.github.com/).
 
