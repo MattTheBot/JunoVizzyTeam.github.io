@@ -10,10 +10,19 @@
 <body>
 
 <div id="header"></div>
+
 <script>
 fetch('header.html')
   .then(res => res.text())
-  .then(data => document.getElementById('header').innerHTML = data);
+  .then(data => {
+    document.getElementById('header').innerHTML = data;
+
+    const menuButton = document.querySelector('.menu-button');
+    const dropdown = document.getElementById('dropdownMenu');
+    menuButton.addEventListener('click', () => {
+        dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+    });
+  });
 </script>
 
 <div class="content">
