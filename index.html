@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JVT Projects</title>
+    <!-- === FONT AWESOME FOR ICONS === -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
         /* === GENERAL PAGE STYLES === */
         body {
@@ -23,6 +26,7 @@
             height: 60px;
             position: sticky;
             top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.4);
         }
 
         /* === LEFT: HAMBURGER MENU BUTTON === */
@@ -34,6 +38,126 @@
             height: 40px;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .menu-button span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: white;
+            margin: 3px 0;
+        }
+
+        /* === CENTER: TITLE === */
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        /* === RIGHT: SOCIALS + CONTACT BUTTONS === */
+        .right-buttons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .social-button, .contact-button {
+            background-color: #3a3a3a;
+            border: none;
+            padding: 8px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .social-button:hover, .contact-button:hover {
+            background-color: #505050;
+        }
+
+        /* === DROPDOWN MENU STYLES === */
+        .dropdown {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 60px; /* Below top bar */
+            left: 15px;
+            background-color: #2c2c2c;
+            min-width: 150px;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+        }
+        .dropdown a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        .dropdown a:hover {
+            background-color: #3a3a3a;
+        }
+
+        /* === MAIN CONTENT AREA === */
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- === TOP BAR === -->
+    <div class="top-bar">
+        
+        <!-- LEFT: MENU BUTTON -->
+        <button class="menu-button" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- CENTER: TITLE -->
+        <div class="title">JVT</div>
+
+        <!-- RIGHT: SOCIALS & CONTACT -->
+        <div class="right-buttons">
+            <!-- Social buttons (replace # with your links) -->
+            <a href="#" class="social-button" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-button" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-button" title="X"><i class="fab fa-x-twitter"></i></a>
+            <!-- Contact button -->
+            <a href="mailto:youremail@example.com" class="contact-button">Help</a>
+        </div>
+    </div>
+
+    <!-- DROPDOWN MENU -->
+    <div class="dropdown" id="dropdownMenu">
+        <a href="#">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">Members / Staff</a>
+    </div>
+
+    <!-- MAIN CONTENT AREA -->
+    <div class="content">
+        <h1>Welcome to JVT</h1>
+        <p>This is where your project pages, descriptions, or other content can go.</p>
+    </div>
+
+    <!-- === JAVASCRIPT FOR MENU TOGGLE === -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('dropdownMenu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>
             justify-content: center;
             align-items: center;
             cursor: pointer;
