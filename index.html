@@ -10,15 +10,24 @@
 <body>
 
 <div id="header"></div>
+
 <script>
 fetch('header.html')
   .then(res => res.text())
-  .then(data => document.getElementById('header').innerHTML = data);
+  .then(data => {
+    document.getElementById('header').innerHTML = data;
+
+    const menuButton = document.querySelector('.menu-button');
+    const dropdown = document.getElementById('dropdownMenu');
+    menuButton.addEventListener('click', () => {
+        dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+    });
+  });
 </script>
 
 <div class="content">
 <h1>Welcome to JVT</h1>
-<p>This is the homepage of our projects website.Thank you for Checking this out!</p>
+<p>This is the homepage of our projects website.</p>
 </div>
 
 </body>
