@@ -1,34 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Members - JVT</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team - JVT</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header include -->
+  <div id="header"></div>
 
-<div id="header"></div>
+  <main class="team-container">
+    <section class="team-header">
+      <h1>Meet the Members and Staff of the JVT</h1>
+      <hr class="divider">
+    </section>
 
-<script>
-fetch('header.html')
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById('header').innerHTML = data;
+    <section class="team-grid">
+      <!-- Member 1 -->
+      <div class="team-member">
+        <img src="https://via.placeholder.com/150" alt="Profile 1" class="profile-pic">
+        <h2 class="member-name">Alice</h2>
+        <p class="member-role">Team Leader</p>
+        <a href="#" class="profile-btn">View In-Game Profile</a>
+      </div>
 
-    const menuButton = document.querySelector('.menu-button');
-    const dropdown = document.getElementById('dropdownMenu');
-    menuButton.addEventListener('click', () => {
-        dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
-    });
-  });
-</script>
+      <!-- Member 2 -->
+      <div class="team-member">
+        <img src="https://via.placeholder.com/150" alt="Profile 2" class="profile-pic">
+        <h2 class="member-name">Bob</h2>
+        <p class="member-role">Developer</p>
+        <a href="#" class="profile-btn">View In-Game Profile</a>
+      </div>
 
-<div class="content">
-<h1>Members / Staff</h1>
-<p>Meet the members and staff of JVT.</p>
-</div>
+      <!-- Member 3 -->
+      <div class="team-member">
+        <img src="https://via.placeholder.com/150" alt="Profile 3" class="profile-pic">
+        <h2 class="member-name">Charlie</h2>
+        <p class="member-role">Designer</p>
+        <a href="#" class="profile-btn">View In-Game Profile</a>
+      </div>
 
+      <!-- Member 4 -->
+      <div class="team-member">
+        <img src="https://via.placeholder.com/150" alt="Profile 4" class="profile-pic">
+        <h2 class="member-name">Diana</h2>
+        <p class="member-role">Tester</p>
+        <a href="#" class="profile-btn">View In-Game Profile</a>
+      </div>
+
+      <!-- Member 5 -->
+      <div class="team-member">
+        <img src="https://via.placeholder.com/150" alt="Profile 5" class="profile-pic">
+        <h2 class="member-name">Ethan</h2>
+        <p class="member-role">Community Manager</p>
+        <a href="#" class="profile-btn">View In-Game Profile</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Load header.html into #header
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("header").innerHTML = data);
+  </script>
 </body>
 </html>
